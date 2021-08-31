@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/stylesheets/styles.css" />
+</head>
+
+<body class="home">
+    <header>
+        <a href="/">
+        <div class="box-logo">
+            <img class="logo" src="/images/logo.png" alt="" />
+        </div>
+    </a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="">smarphones</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="">tablets</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="">computadoras</a>
+                    <hr>
+                </li>
+            </ul>
+            <ul class="usuario">
+                <li><a href="/admin">administrador</a></li>
+                <li><a href="/users/login">login</a></li>
+                <li><a href="/users/register">register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div id="carousel1" class="carousel-item active"></div>
+                <div id="carousel2" class="carousel-item"></div>
+                <div id="carousel3" class="carousel-item"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <main>
+        <section class="productos">
+            <a href="/products/detail">
+                <article>
+                    <img class="img-producto" src="/images/img-phone-01.jpg" alt="telefono móvil" />
+                    <img class="img-sticker" src="/images/img-descuento.png" alt="" />
+                        <h4>Nombre del producto</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Exercitationem sapiente quaerat corrupti deleniti earum?
+                            Exercitationem necessitatibus quidem nemo laborum deserunt.
+                        </p>
+                   
+                    <a class="btn-comprar" href="#">comprar</a>
+                </article>
+            </a>
+            <a href="/products/detail">
+            <article>
+                <img class="img-producto" src="/images/img-phone-02.jpg" alt="telefono móvil" />
+                <img class="img-sticker" src="/images/img-gratis.png" alt="" />
+                <h4>Nombre del producto</h4>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Exercitationem sapiente quaerat corrupti deleniti earum?
+                    Exercitationem necessitatibus quidem nemo laborum deserunt.
+                </p>
+                <a class="btn-comprar" href="#">comprar</a>
+            </article>
+        </a>
+        <a href="/products/detail">
+            <article>
+                <img class="img-producto" src="/images/img-phone-03.jpg" alt="telefono móvil" />
+                <img class="img-sticker" src="/images/img-nuevo.png" alt="" />
+                <h4>Nombre del producto</h4>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Exercitationem sapiente quaerat corrupti deleniti earum?
+                    Exercitationem necessitatibus quidem nemo laborum deserunt.
+                </p>
+                <a class="btn-comprar" href="#">comprar</a>
+            </article>
+        </a>
+        <a href="/products/detail">
+            <article>
+                <img class="img-producto" src="/images/img-phone-01.jpg" alt="telefono móvil" />
+                <img class="img-sticker" src="/images/img-descuento.png" alt="" />
+                <h4>Nombre del producto</h4>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Exercitationem sapiente quaerat corrupti deleniti earum?
+                    Exercitationem necessitatibus quidem nemo laborum deserunt.
+                </p>
+                <a class="btn-comprar" href="#">comprar</a>
+            </article>
+        </a>
+        <a href="/products/detail">
+            <article>
+                <img class="img-producto" src="/images/img-phone-02.jpg" alt="telefono móvil" />
+                <img class="img-sticker" src="/images/img-nuevo.png" alt="" />
+                <h4>Nombre del producto</h4>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Exercitationem sapiente quaerat corrupti deleniti earum?
+                    Exercitationem necessitatibus quidem nemo laborum deserunt.
+                </p>
+                <a class="btn-comprar" href="#">comprar</a>
+            </article>
+        </a>
+        <a href="/products/detail">
+            <article>
+                <img class="img-producto" src="/images/img-phone-03.jpg" alt="telefono móvil" />
+                <img class="img-sticker" src="/images/img-gratis.png" alt="" />
+                <h4>Nombre del producto</h4>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Exercitationem sapiente quaerat corrupti deleniti earum?
+                    Exercitationem necessitatibus quidem nemo laborum deserunt.
+                </p>
+                <a class="btn-comprar" href="#">comprar</a>
+            </article>
+        </a>
+        </section>
+        <aside>
+            <section class="tutoriales">
+                <h3>Tutoriales</h3>
+                <article>
+                    <img src="/images/aside-01.jpg" alt="imagen tutorial" />
+                    <p>Título del tutorial de reparación</p>
+                </article>
+                <article>
+                    <img src="/images/aside-02.jpg" alt="imagen tutorial" />
+                    <p>Título del tutorial de reparación</p>
+                </article>
+                <article>
+                    <img src="/images/aside-03.jpg" alt="imagen tutorial" />
+                    <p>Título del tutorial de reparación</p>
+                </article>
+                <article>
+                    <img src="/images/aside-04.jpg" alt="imagen tutorial" />
+                    <p>Título del tutorial de reparación</p>
+                </article>
+            </section>
+            <section class="box-publicidad">
+                <h3>Publicidad</h3>
+                <article class="publicidad">
+                    <img src="/images/ad-01.jpg" alt="imagen publicitaria" />
+                    <img src="/images/ad-02.jpg" alt="imagen publicitaria" />
+                </article>
+            </section>
+        </aside>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
