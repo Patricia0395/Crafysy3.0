@@ -36,85 +36,24 @@
     </section>
     <main>
         <section class="productos">
-            <a href="/products/detail">
-                <article>
-                    <img class="img-producto" src="/images/img-phone-01.jpg" alt="telefono móvil" />
-                    <img class="img-sticker" src="/images/img-descuento.png" alt="" />
-                        <h4>Nombre del producto</h4>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Exercitationem sapiente quaerat corrupti deleniti earum?
-                            Exercitationem necessitatibus quidem nemo laborum deserunt.
-                        </p>
-                   
-                    <a class="btn-comprar" href="#">comprar</a>
-                </article>
-            </a>
-            <a href="/products/detail">
-            <article>
-                <img class="img-producto" src="/images/img-phone-02.jpg" alt="telefono móvil" />
-                <img class="img-sticker" src="/images/img-gratis.png" alt="" />
-                <h4>Nombre del producto</h4>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Exercitationem sapiente quaerat corrupti deleniti earum?
-                    Exercitationem necessitatibus quidem nemo laborum deserunt.
-                </p>
-                <a class="btn-comprar" href="#">comprar</a>
-            </article>
-        </a>
-        <a href="/products/detail">
-            <article>
-                <img class="img-producto" src="/images/img-phone-03.jpg" alt="telefono móvil" />
-                <img class="img-sticker" src="/images/img-nuevo.png" alt="" />
-                <h4>Nombre del producto</h4>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Exercitationem sapiente quaerat corrupti deleniti earum?
-                    Exercitationem necessitatibus quidem nemo laborum deserunt.
-                </p>
-                <a class="btn-comprar" href="#">comprar</a>
-            </article>
-        </a>
-        <a href="/products/detail">
-            <article>
-                <img class="img-producto" src="/images/img-phone-01.jpg" alt="telefono móvil" />
-                <img class="img-sticker" src="/images/img-descuento.png" alt="" />
-                <h4>Nombre del producto</h4>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Exercitationem sapiente quaerat corrupti deleniti earum?
-                    Exercitationem necessitatibus quidem nemo laborum deserunt.
-                </p>
-                <a class="btn-comprar" href="#">comprar</a>
-            </article>
-        </a>
-        <a href="/products/detail">
-            <article>
-                <img class="img-producto" src="/images/img-phone-02.jpg" alt="telefono móvil" />
-                <img class="img-sticker" src="/images/img-nuevo.png" alt="" />
-                <h4>Nombre del producto</h4>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Exercitationem sapiente quaerat corrupti deleniti earum?
-                    Exercitationem necessitatibus quidem nemo laborum deserunt.
-                </p>
-                <a class="btn-comprar" href="#">comprar</a>
-            </article>
-        </a>
-        <a href="/products/detail">
-            <article>
-                <img class="img-producto" src="/images/img-phone-03.jpg" alt="telefono móvil" />
-                <img class="img-sticker" src="/images/img-gratis.png" alt="" />
-                <h4>Nombre del producto</h4>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Exercitationem sapiente quaerat corrupti deleniti earum?
-                    Exercitationem necessitatibus quidem nemo laborum deserunt.
-                </p>
-                <a class="btn-comprar" href="#">comprar</a>
-            </article>
-        </a>
+            <% products.forEach(product => { %>
+                <a href="/products/detail">
+                    <article>
+                        <img class="img-producto" src="/images/<%= product.image %> " alt="telefono móvil" />
+                            <img class="img-sticker" src="/images/<%= product.category === 'oferta' ? 'img-descuento.png' : product.category === 'nuevo' ? 'img-nuevo.png' : 'img-gratis.png'%>" alt="" />
+                      
+ rgxv   gvb.cx
+                            <h4><%= product.name %></h4>
+                            <p>
+                                <%= product.description %> 
+                            </p>
+                       
+                        <a class="btn-comprar" href="#">comprar</a>
+                    </article>
+                </a>
+            <% }) %>
+           
+          
         </section>
         <aside>
             <section class="tutoriales">
