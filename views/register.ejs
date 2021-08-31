@@ -1,27 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
+    <%- include('./partials/head',{title: 'Registro de usuario'}) %> 
+
 <body class="register">
-    <header>
-        <div><a href="/"><img src="/images/logo.png" alt=""></a></div>
-        <nav>
-            <ul class="menu">
-                <li><a href="">smarphones</a></li>
-                <li><a href="">tablets</a></li>
-                <li><a href="">computadoras</a></li>
-            </ul>
-            <ul class="usuario">
-                <li><a href="/users/login">login</a></li>
-                <li><a href="/users/register">register</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('./partials/header') %> 
+
     <main>
         <div class="formulario">
             <h2>REGISTRATE</h2>
@@ -114,5 +97,7 @@
         </div>
        
     </main>
+    <%- include('./partials/scripts') %> 
+
 </body>
 </html>

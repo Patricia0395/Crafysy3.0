@@ -1,45 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %> </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/stylesheets/styles.css" />
-</head>
+<%- include('./partials/head') %> 
 
 <body class="home">
-    <header>
-        <a href="/">
-        <div class="box-logo">
-            <img class="logo" src="/images/logo.png" alt="" />
-        </div>
-    </a>
-        <nav>
-            <ul class="menu">
-                <li>
-                    <a href="">smarphones</a>
-                    <hr>
-                </li>
-                <li>
-                    <a href="">tablets</a>
-                    <hr>
-                </li>
-                <li>
-                    <a href="">computadoras</a>
-                    <hr>
-                </li>
-            </ul>
-            <ul class="usuario">
-                <li><a href="/admin">administrador</a></li>
-                <li><a href="/users/login">login</a></li>
-                <li><a href="/users/register">register</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <%- include('./partials/header') %> 
+
     <section class="banner">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -178,9 +145,8 @@
             </section>
         </aside>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-        crossorigin="anonymous"></script>
+    <%- include('./partials/scripts') %> 
+
 </body>
 
 </html>
