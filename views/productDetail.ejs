@@ -18,9 +18,9 @@
                 </div>
             </div>
             <div class="box-content">
-                <h2>Titulo del producto</h2>
-                <p>Descripción del producto</p>
-                <h3>$ 25.000</h3><span>10% OFF</span>
+                <h2><%= product.name %></h2>
+                <p><%= product.description %></p>
+                <h3>$ <%= product.price %></h3><span><%= product.discount %>% OFF</span>
                 <hr>
                 <h5>Caracteristicas</h5>
                 <div class="features">
@@ -57,7 +57,7 @@
         </div>
    </main>
    <%- include('./partials/scripts') %> 
-    <script src="/js/glider.js"></script>
-    <script src="/js/productDetail.js"></script>
+    <script src="/javascripts/glider.js"></script>
+    <script src="/javascripts/productDetail.js"></script>
 </body>
 </html>

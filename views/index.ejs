@@ -37,12 +37,10 @@
     <main>
         <section class="productos">
             <% products.forEach(product => { %>
-                <a href="/products/detail">
+                <a href="/products/detail/<%= product.id %>">
                     <article>
                         <img class="img-producto" src="/images/<%= product.image %> " alt="telefono móvil" />
                             <img class="img-sticker" src="/images/<%= product.category === 'oferta' ? 'img-descuento.png' : product.category === 'nuevo' ? 'img-nuevo.png' : 'img-gratis.png'%>" alt="" />
-                      
- rgxv   gvb.cx
                             <h4><%= product.name %></h4>
                             <p>
                                 <%= product.description %> 
