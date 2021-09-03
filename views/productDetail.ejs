@@ -25,10 +25,9 @@
                 <h5>Caracteristicas</h5>
                 <div class="features">
                     <ul>
-                        <li>Característica 1</li>
-                        <li>Característica 1</li>
-                        <li>Característica 1</li>
-                        <li>Característica 1</li>
+                        <% product.features.forEach(feature => { %>
+                            <li><%= feature %></li>
+                        <% }) %>
                     </ul>
                 </div>
             </div>

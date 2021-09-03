@@ -4,7 +4,59 @@
 
 <body class="bg-light">
   <%- include('./partials/header') %> 
+  <main class="container">
+    <div class="row">
+      <div class="col-12 col-lg-10 mx-auto">
+        <div class="card shadow mt-5">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-6">
+                <%= title %> 
+              </div>
+              <div class="col-6 text-end">
+                <div>
+                  <a class="btn btn-sm btn-primary " href="/products/add">Agregar producto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Descuento</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% products.forEach((product,index) => { %>
+                  <tr>
+                    <th scope="row"><%= index + 1 %> </th>
+                    <td><img width="100" src="/images/<%= product.image %> " alt=""></td>
+                    <td><%= product.name %> </td>
+                    <td><%= product.price %> </td>
+                    <td><%= product.discount %> </td>
+                    <td><%= product.category %> </td>
+                    <td>
+                      <button class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></button>
+                      <button class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
 
+                    </td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </main>
 
 
   <%- include('./partials/scripts') %> 

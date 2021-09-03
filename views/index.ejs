@@ -56,22 +56,14 @@
         <aside>
             <section class="tutoriales">
                 <h3>Tutoriales</h3>
-                <article>
-                    <img src="/images/aside-01.jpg" alt="imagen tutorial" />
-                    <p>Título del tutorial de reparación</p>
-                </article>
-                <article>
-                    <img src="/images/aside-02.jpg" alt="imagen tutorial" />
-                    <p>Título del tutorial de reparación</p>
-                </article>
-                <article>
-                    <img src="/images/aside-03.jpg" alt="imagen tutorial" />
-                    <p>Título del tutorial de reparación</p>
-                </article>
-                <article>
-                    <img src="/images/aside-04.jpg" alt="imagen tutorial" />
-                    <p>Título del tutorial de reparación</p>
-                </article>
+                <% tutoriales.forEach(tutorial => { %>
+                    <article>
+                        <img src="/images/<%= tutorial.image %> " alt="imagen tutorial" />
+                        <p><%= tutorial.title %> </p>
+                    </article>
+                <% }) %>
+              
+             
             </section>
             <section class="box-publicidad">
                 <h3>Publicidad</h3>

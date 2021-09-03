@@ -6,7 +6,8 @@
         "category": "gratis",
         "price": 100,
         "discount": 10,
-        "image": "img-phone-03.jpg"
+        "image": "img-phone-03.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 12mpx","Memoria: 32gb"]
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "category": "gratis",
         "price": 200,
         "discount": 5,
-        "image": "img-phone-03.jpg"
+        "image": "img-phone-03.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 12mpx","Memoria: 16gb"]
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "category": "oferta",
         "price": 500,
         "discount": 15,
-        "image": "img-phone-01.jpg"
+        "image": "img-phone-01.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 16mpx","Memoria: 64gb"]
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "category": "nuevo",
         "price": 120,
         "discount": 10,
-        "image": "img-phone-02.jpg"
+        "image": "img-phone-02.jpg",
+        "features" : ["Pantalla: 6.1'","Camara: 12mpx","Memoria: 32gb"]
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "category": "nuevo",
         "price": 350,
         "discount": 10,
-        "image": "img-phone-01.jpg"
+        "image": "img-phone-01.jpg",
+        "features" : ["Pantalla: 7.1'","Camara: 12mpx","Memoria: 128gb"]
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "category": "oferta",
         "price": 600,
         "discount": 10,
-        "image": "img-phone-02.jpg"
+        "image": "img-phone-02.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 12mpx","Memoria: 32gb"]
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "category": "nuevo",
         "price": 480,
         "discount": 10,
-        "image": "img-phone-01.jpg"
+        "image": "img-phone-01.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 12mpx","Memoria: 32gb"]
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@
         "category": "gratis",
         "price": 690,
         "discount": 10,
-        "image": "img-phone-03.jpg"
+        "image": "img-phone-03.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 12mpx","Memoria: 32gb"]
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@
         "category": "gratis",
         "price": 180,
         "discount": 10,
-        "image": "img-phone-02.jpg"
+        "image": "img-phone-02.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 12mpx","Memoria: 32gb"]
     },
     {
         "id": 10,
@@ -87,7 +96,8 @@
         "category": "gratis",
         "price": 190,
         "discount": 10,
-        "image": "img-phone-03.jpg"
+        "image": "img-phone-03.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 12mpx","Memoria: 32gb"]
     },
     {
         "id": 11,
@@ -96,7 +106,8 @@
         "category": "nuevo",
         "price": 100,
         "discount": 10,
-        "image": "img-phone-01.jpg"
+        "image": "img-phone-01.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 12mpx","Memoria: 32gb"]
     },
     {
         "id": 12,
@@ -105,7 +116,8 @@
         "category": "nuevo",
         "price": 100,
         "discount": 10,
-        "image": "img-phone-01.jpg"
+        "image": "img-phone-01.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 12mpx","Memoria: 32gb"]
     },
     {
         "id": 13,
@@ -114,7 +126,8 @@
         "category": "oferta",
         "price": 120,
         "discount": 10,
-        "image": "img-phone-03.jpg"
+        "image": "img-phone-03.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 32mpx","Memoria: 128gb"]
     },
     {
         "id": 14,
@@ -123,7 +136,8 @@
         "category": "oferta",
         "price": 450,
         "discount": 10,
-        "image": "img-phone-02.jpg"
+        "image": "img-phone-02.jpg",
+        "features" : ["Pantalla: 4.1'","Camara: 12mpx","Memoria: 2gb"]
     },
     {
         "id": 15,
@@ -132,7 +146,8 @@
         "category": "oferta",
         "price": 100,
         "discount": 10,
-        "image": "img-phone-01.jpg"
+        "image": "img-phone-01.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 8mpx","Memoria: 4gb"]
     },
     {
         "id": 16,
@@ -141,6 +156,7 @@
         "category": "gratis",
         "price": 100,
         "discount": 10,
-        "image": "img-phone-02.jpg"
+        "image": "img-phone-02.jpg",
+        "features" : ["Pantalla: 5.1'","Camara: 20mpx","Memoria: 32gb"]
     }
 ]
