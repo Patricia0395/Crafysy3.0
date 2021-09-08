@@ -41,14 +41,14 @@ body{
     margin: 20px 0;
 }
 
-label{
+/* label{
     margin: 5px 0;
-}
+} */
 
-input, select{
+/* input, select{
     padding: 5px;
     margin: 5px 0;
-}
+} */
 span.error{
     color: red;
     font-size: 14px;
