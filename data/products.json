@@ -226,5 +226,15 @@
       "category": "oferta",
       "image": "default.jpg",
       "features": []
+   },
+   {
+      "id": 20,
+      "name": "Samsumg A02s",
+      "description": "Barato y bueno",
+      "price": 100,
+      "discount": 5,
+      "category": "oferta",
+      "image": "img-phone-1631712915662.webp",
+      "features": []
    }
 ]

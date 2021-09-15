@@ -14,7 +14,7 @@ module.exports = {
         })
     },
     store : (req,res) => {
-
+        
         const {name,description,price,discount,category} = req.body;
 
         let product = {
@@ -24,7 +24,7 @@ module.exports = {
             price : +price,
             discount : +discount,
             category,
-            image : 'default.jpg',
+            image : req.file ? req.file.filename : 'default.jpg',
             features : []
         }
 
