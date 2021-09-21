@@ -22,21 +22,20 @@
     margin-top: 30px;
 }
 .home main section.productos{
-    width: 800px;
+    width: 790px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .home main section.productos article{
-    width: 380px;
+    width: 49%;
     margin: 10px 0 20px;
     background-color: #ffffff;
     padding: 10px;
     border: 1px solid #acd8e6;
     position: relative;
     transition: all .5s ease;
-
 }
 
 .home main section.productos article:hover{
@@ -77,11 +76,17 @@
     width: 320px;
 }
 
-.home main aside h3{
+.home main aside h3 {
     background-color: #ffffff;
     border: 1px solid #acd8e6;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+.home main section.productos h3{
+    background-color: #ffffff;
+    border: 1px solid #acd8e6;
+    padding: 10px;
+   height: 55px;
 }
 
 .home main aside section.tutoriales article{

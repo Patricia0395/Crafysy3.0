@@ -1,15 +1,5 @@
 [
    {
-      "id": 1,
-      "name": "lupus",
-      "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent",
-      "price": 100,
-      "discount": 10,
-      "category": "gratis",
-      "image": "img-phone-03.jpg",
-      "features": []
-   },
-   {
       "id": 2,
       "name": "Motorola Edge XT",
       "description": "habitasse platea dictumst aliquam augue quam sollicitudin vitae",
@@ -235,6 +225,16 @@
       "discount": 5,
       "category": "oferta",
       "image": "img-phone-1631712915662.webp",
+      "features": []
+   },
+   {
+      "id": 22,
+      "name": "nuevo producto de testeo 1",
+      "description": "una no tan breve descripción",
+      "price": 100,
+      "discount": 0,
+      "category": "gratis",
+      "image": "default.jpg",
       "features": []
    }
 ]

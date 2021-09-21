@@ -4,7 +4,7 @@ let  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','prod
 let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','categories.json'),'utf-8'));
 
 const firstLetter = require('../utils/firstLetter');
-
+const {validationResult} = require('express-validator');
 
 module.exports = {
     add : (req,res) => {
@@ -14,25 +14,37 @@ module.exports = {
         })
     },
     store : (req,res) => {
-        
-        const {name,description,price,discount,category} = req.body;
+        let errors = validationResult(req);
+        return res.send(errors)
 
-        let product = {
-            id : products[products.length - 1].id + 1,
-            name : name.trim(),
-            description : description.trim(),
-            price : +price,
-            discount : +discount,
-            category,
-            image : req.file ? req.file.filename : 'default.jpg',
-            features : []
+        if(errors.isEmpty()){
+            const {name,description,price,discount,category} = req.body;
+
+            let product = {
+                id : products[products.length - 1].id + 1,
+                name : name.trim(),
+                description : description.trim(),
+                price : +price,
+                discount : +discount,
+                category,
+                image : req.file ? req.file.filename : 'default.jpg',
+                features : []
+            }
+            products.push(product);
+
+            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
+    
+            return res.redirect('/admin')
+        }else{
+            return res.render('productAdd',{
+                categories,
+                firstLetter,
+                errors : errors.mapped()
+            })
         }
+      
 
-        products.push(product);
-
-        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
-
-        return res.redirect('/admin')
+     
 
     },
     detail : (req,res) => {

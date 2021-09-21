@@ -21,9 +21,12 @@ const upload = multer({
     storage
 })
 
+/* validaciones */
+const productAddValidator = require('../validations/productAddValidator')
+
 /* /products */
 router.get('/add',add);
-router.post('/add',upload.single('image'),store);
+router.post('/add',upload.single('image'),productAddValidator,store);
 router.get('/detail/:id',detail);
 router.get('/edit/:id',edit);
 router.put('/update/:id',update)
