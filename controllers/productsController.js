@@ -15,7 +15,6 @@ module.exports = {
     },
     store : (req,res) => {
         let errors = validationResult(req);
-        return res.send(errors)
 
         if(errors.isEmpty()){
             const {name,description,price,discount,category} = req.body;
@@ -39,13 +38,10 @@ module.exports = {
             return res.render('productAdd',{
                 categories,
                 firstLetter,
-                errors : errors.mapped()
+                errors : errors.mapped(),
+                old : req.body
             })
         }
-      
-
-     
-
     },
     detail : (req,res) => {
     
@@ -61,27 +57,38 @@ module.exports = {
         })
     },
     update : (req,res) => {
-        
-        const {name,description,price,discount,category} = req.body;
+        let errors = validationResult(req);
 
-        let product = products.find(product => product.id === +req.params.id);
-
-        let productModified = {
-            id : +req.params.id,
-            name : name.trim(),
-            description : description.trim(),
-            price : +price,
-            discount : +discount,
-            category,
-            image : product.image,
-            features : product.features
+        if(errors.isEmpty()){
+            const {name,description,price,discount,category} = req.body;
+            let product = products.find(product => product.id === +req.params.id);
+    
+            let productModified = {
+                id : +req.params.id,
+                name : name.trim(),
+                description : description.trim(),
+                price : +price,
+                discount : +discount,
+                category,
+                image : product.image,
+                features : product.features
+            }
+    
+            let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
+    
+            fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
+    
+            return res.redirect('/admin')
+        }else{
+            return res.render('productEdit',{
+                product : products.find(product => product.id === +req.params.id),
+                categories,
+                firstLetter,
+                errors : errors.mapped(),
+                
+            })
         }
-
-        let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
-
-        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
-
-        return res.redirect('/admin')
+       
 
 
     },

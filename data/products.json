@@ -236,5 +236,15 @@
       "category": "gratis",
       "image": "default.jpg",
       "features": []
+   },
+   {
+      "id": 23,
+      "name": "Iphone 13",
+      "description": "Caro pero bueno... me corrijo muy caro, carísimo!!!!",
+      "price": 500,
+      "discount": 0,
+      "category": "nuevo",
+      "image": "default.jpg",
+      "features": []
    }
 ]
