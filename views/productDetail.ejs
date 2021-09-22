@@ -9,12 +9,12 @@
         <div class="box-detail">
             <div class="box-images">
                 <div class="box-images-min">
-                    <img id="img-prev1" src="/images/products/img-phone-01.jpg" alt="">
-                    <img id="img-prev2" src="/images/products/img-phone-02.jpg" alt="">
-                    <img id="img-prev3" src="/images/products/img-phone-03.jpg" alt="">
+                    <% product.image.forEach(image => { %>
+                        <img id="img-prev1" src="/images/products/<%= image %>" alt="" onclick="document.getElementById('img-main').setAttribute('src','/images/products/<%=image%>')">
+                    <% }) %>
                 </div>
                 <div class="img-principal">
-                    <img id="img-main" src="/images/products/img-phone-01.jpg" alt="">
+                    <img id="img-main" src="/images/products/<%= product.image[0] %>" alt="">
                 </div>
             </div>
             <div class="box-content">
@@ -35,18 +35,10 @@
                 <h4>Productos relacionados</h4>
                 <div class="glider-contain">
                     <div class="glider">
-                      <div class="item-carousel"><img src="/images/img-phone-01.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-02.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-03.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-01.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-02.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-03.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-01.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-02.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-03.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-01.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-02.jpg" alt=""></div>
-                      <div class="item-carousel"><img src="/images/img-phone-03.jpg" alt=""></div>
+                        <% products.forEach(product => { %>
+                            <div class="item-carousel"><a href="/products/detail/<%= product.id %> "><img src="/images/products/<%= product.image[0] %>" alt=""></a> </div>
+                        <% }) %>
+                     
                     </div>
                     <button aria-label="Previous" class="glider-prev">«</button>
                     <button aria-label="Next" class="glider-next">»</button>

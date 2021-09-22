@@ -16,6 +16,8 @@ module.exports = {
     store : (req,res) => {
         let errors = validationResult(req);
 
+        let images = req.files.map(image => image.filename);
+
         if(errors.isEmpty()){
             const {name,description,price,discount,category} = req.body;
 
@@ -26,7 +28,7 @@ module.exports = {
                 price : +price,
                 discount : +discount,
                 category,
-                image : req.file ? req.file.filename : 'default.jpg',
+                image : req.files.length != 0 ? images : ['default.jpg'],
                 features : []
             }
             products.push(product);
@@ -45,8 +47,11 @@ module.exports = {
     },
     detail : (req,res) => {
     
+        let product = products.find(product => product.id === +req.params.id);
+
         return res.render('productDetail',{
-            product : products.find(product => product.id === +req.params.id)
+            product,
+            products : products.filter(p => p.category === product.category)
         })
     },
     edit : (req,res) => {

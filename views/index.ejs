@@ -40,7 +40,7 @@
                 <% ofertas.forEach(product => { %>
                         <a href="/products/detail/<%= product.id %>">
                             <article>
-                                <img class="img-producto" src="/images/products/<%= product.image %> " alt="telefono móvil" />
+                                <img class="img-producto" src="/images/products/<%= product.image[0] %>" alt="telefono móvil" />
                                     <img class="img-sticker" src="/images/<%= product.category === 'oferta' ? 'img-descuento.png' : product.category === 'nuevo' ? 'img-nuevo.png' : 'img-gratis.png'%>" alt="" />
                                     <h4><%= product.name %></h4>
                                     <p>
@@ -56,7 +56,7 @@
                     <% if (product.category === 'nuevo') { %>
                         <a href="/products/detail/<%= product.id %>">
                             <article>
-                                <img class="img-producto" src="/images/products/<%= product.image %> " alt="telefono móvil" />
+                                <img class="img-producto" src="/images/products/<%= product.image[0] %>" alt="telefono móvil" />
                                     <img class="img-sticker" src="/images/<%= product.category === 'oferta' ? 'img-descuento.png' : product.category === 'nuevo' ? 'img-nuevo.png' : 'img-gratis.png'%>" alt="" />
                                     <h4><%= product.name %></h4>
                                     <p>

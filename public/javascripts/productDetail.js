@@ -33,15 +33,5 @@ new Glider(document.querySelector('.glider'), {
     ]
   });
 
-  document.getElementById('img-prev1').addEventListener('click',()=> {
-      document.getElementById('img-main').setAttribute('src','/images/img-phone-01.jpg')
-  })
 
-  document.getElementById('img-prev2').addEventListener('click',()=> {
-    document.getElementById('img-main').setAttribute('src','/images/img-phone-02.jpg')
-})
-
-document.getElementById('img-prev3').addEventListener('click',()=> {
-    document.getElementById('img-main').setAttribute('src','/images/img-phone-03.jpg')
-})
   
