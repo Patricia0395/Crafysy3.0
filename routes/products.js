@@ -14,7 +14,7 @@ router.post('/add',upload.array('image'),productValidator,store);
 router.get('/detail/:id',detail);
 router.get('/edit/:id',edit);
 router.put('/update/:id',productValidator,update)
-router.get('/search',search);
+router.get('/search/:id',search);
 router.get('/filter',filter);
 router.delete('/destroy/:id',destroy)
 

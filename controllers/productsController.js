@@ -5,6 +5,7 @@ let  categories = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','ca
 
 const firstLetter = require('../utils/firstLetter');
 const {validationResult} = require('express-validator');
+const { dirname } = require('path');
 
 module.exports = {
     add : (req,res) => {
@@ -108,6 +109,12 @@ module.exports = {
         products : products.filter(product => product.category === req.query.category)
     }),
     destroy : (req,res) => {
+        let product = products.find(product => product.id === +req.params.id);
+
+        product.image.forEach(img => {
+            fs.existsSync(path.join(__dirname,'../public/images/products',img)) ? fs.unlinkSync(path.join(__dirname,'../public/images/products',img)) : null
+            
+        });
 
         let productsModified = products.filter(product => product.id !== +req.params.id);
 
