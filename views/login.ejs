@@ -22,7 +22,7 @@
                     <label for="remember">Recordame</label>
                 </div>
                 <div class="box-error">
-                    <span></span>
+                    <span><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
                 </div>
                 <button type="submit">Ingresar</button>
             </form>

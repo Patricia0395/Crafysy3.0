@@ -9,18 +9,28 @@ module.exports = {
         return res.render('register')
     },
     processRegister : (req,res) => {
-        const {name,email,password} = req.body;
-        let user = {
-            id : users.length != 0 ? users[users.length - 1].id + 1 : 1,
-            name : name.trim(),
-            email : email.trim(),
-            password : bcrypt.hashSync(password,10),
-            avatar : 'default.png',
-            rol : "user"
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+            const {name,email,password} = req.body;
+            let user = {
+                id : users.length != 0 ? users[users.length - 1].id + 1 : 1,
+                name : name.trim(),
+                email : email.trim(),
+                password : bcrypt.hashSync(password,10),
+                avatar : 'default.png',
+                rol : "user"
+            }
+            users.push(user);
+            fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
+            return res.redirect('/')
+        }else{
+            return res.render('register',{
+                errores : errors.mapped(),
+                old : req.body
+            })
         }
-        users.push(user);
-        fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
-        return res.redirect('/')
+      
     },
     login : (req,res) => {
         return res.render('login')
@@ -36,6 +46,18 @@ module.exports = {
                 avatar : user.avatar,
                 rol : user.rol
             }
+            if(req.body.remember){
+                res.cookie('craftsyForEver',req.session.userLogin,{maxAge : 1000 * 60})
+            }
+            return res.redirect('/')
+        }else{
+            return res.render('login',{
+                errores : errors.mapped()
+            })
         }
+    },
+    logout : (req,res) =>{
+        req.session.destroy()
+        res.redirect('/')
     }
 }

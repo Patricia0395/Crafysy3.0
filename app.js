@@ -7,6 +7,9 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
 
+const localUserCheck = require('./middlewares/localsUserCheck');
+const cookieCheck = require('./middlewares/cookieCheck');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -26,9 +29,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(methodOverride('_method'));
 app.use(session({
-  secret : "Craftsy2.0"
+  secret : "Craftsy2.0",
+  resave : false,
+  saveUninitialized : true
 }))
 
+app.use(cookieCheck);
+app.use(localUserCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
