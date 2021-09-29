@@ -1,10 +1,10 @@
 [
    {
       "id": 1,
-      "name": "Eric",
+      "name": "Eric Daniel",
       "email": "menaericdaniel@gmail.com",
-      "password": "$2a$10$d1C.1BBoRnMN.sj1/gs52uFk7FD.HtS/c4yYCzvlG2MEYFCzXlmPy",
-      "avatar": "default.png",
+      "password": "$2a$10$407ij0hzZ0IK/G5xIlsPEu6Ylb9oecS666mdbe04Ve4BLBgRYFTBK",
+      "avatar": "avatar-1632915603570.jpg",
       "rol": "admin"
    },
    {
@@ -21,6 +21,30 @@
       "email": "lourdes@tucuman.gob",
       "password": "$2a$10$Hf7vtQxa6rIGNrtDcQdkG.7NsMSyMPLIXnfiiulSBWC6CmSCLsmy6",
       "avatar": "default.png",
+      "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "Patricia",
+      "email": "patricia@craftsy.com",
+      "password": "$2a$10$MKk88d2CaeDQRqWQfJtR4uA9xvL51st.ZFwJH3M2wD5gfDnHEceli",
+      "avatar": "default.png",
+      "rol": "user"
+   },
+   {
+      "id": 5,
+      "name": "Nahir",
+      "email": "florencia@craftsy.com",
+      "password": "",
+      "avatar": "default.png",
+      "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "Leandro",
+      "email": "leandro@gmail.com",
+      "password": "$2a$10$jdezgWKAEwTFQckbkcrIPOWL3wpoXOkzLROaMpblKhNgSNj8NIr36",
+      "avatar": "avatar-1632918365168.jpg",
       "rol": "user"
    }
 ]

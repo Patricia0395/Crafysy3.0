@@ -23,15 +23,18 @@
                 <a class="nav-link ">computadoras</a>
                 <hr>
               </li>
-              
-          
             </ul>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 menu">
+            <ul class="navbar-nav mb-2 mb-lg-0 menu">
                 <% if (locals.userLogin) { %>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <%= locals.userLogin.name %>
+                      <div class="d-flex flex-column align-items-center">
+                        <div>
+                          <img width="70" class="rounded-circle" src="/images/users/<%= locals.userLogin.avatar %> " alt="">
+                        </div>
+                        <p><%= locals.userLogin.name %></p>
+                      </div>  
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="/users/profile">Mi perfil</a></li>

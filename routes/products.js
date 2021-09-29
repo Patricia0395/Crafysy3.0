@@ -6,13 +6,15 @@ const upload = require('../middlewares/multerImageProduct')
 const {add, detail, edit, search, filter,store,update,destroy} = require('../controllers/productsController');
 
 /* validaciones */
-const productValidator = require('../validations/productValidator')
+const productValidator = require('../validations/productValidator');
+
+const adminUserCheck = require('../middlewares/adminUserCheck')
 
 /* /products */
-router.get('/add',add);
+router.get('/add',adminUserCheck,add);
 router.post('/add',upload.array('image'),productValidator,store);
 router.get('/detail/:id',detail);
-router.get('/edit/:id',edit);
+router.get('/edit/:id',adminUserCheck, edit);
 router.put('/update/:id',productValidator,update)
 router.get('/search/:id',search);
 router.get('/filter',filter);

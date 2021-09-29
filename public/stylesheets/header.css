@@ -1,7 +1,6 @@
 header{
     background-color: #ef4c27;
     display: flex;
-    width: 100%;
     padding: 20px;
 }
 
@@ -43,7 +42,6 @@ header nav{
 
 header nav ul{
     display: flex;
-    width: 100%;
 }
 
 header nav ul.menu{

@@ -24,6 +24,11 @@
                     <input type="password" placeholder="tu contraseña" id="password" name="password">
                     <span class="error"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
                 </div>
+                <div class="box-form">
+                    <label for="password">Confirma tu contraseña</label>
+                    <input type="password" placeholder="confirma tu contraseña" id="password2" name="password2">
+                    <span class="error"><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </span>
+                </div>
                     <div class="check-box-all">
                         <div class="box-check">
                             <input type="checkbox" name="terms" id="terms">

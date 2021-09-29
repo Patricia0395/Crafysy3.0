@@ -3,8 +3,8 @@
       "id": 2,
       "name": "Motorola Edge XT",
       "description": "habitasse platea dictumst aliquam augue quam sollicitudin vitae",
-      "price": 200,
-      "discount": 5,
+      "price": 20,
+      "discount": 50,
       "category": "gratis",
       "image": [
          "img-phone-03.jpg",
@@ -16,9 +16,9 @@
       "id": 3,
       "name": "blandit",
       "description": "consequat lectus in est risus auctor sed tristique in tempus",
+      "price": 100,
+      "discount": 90,
       "category": "oferta",
-      "price": 500,
-      "discount": 15,
       "image": [
          "img-phone-01.jpg"
       ],
