@@ -75,15 +75,16 @@ module.exports = {
         })
     },
     update : (req,res) => {
-        let errors = validationResult(req)
+        let errors = validationResult(req);
         if(errors.isEmpty()){
             let user = users.find(user => user.id === req.session.userLogin.id);
-
+            let hashPass = req.body.password ? bcrypt.hashSync(req.body.password,10) : user.password;
+            console.log(req.body.password)
             let userModified = {
                 id : user.id,
                 name : req.body.name,
                 email : user.email,
-                password : bcrypt.hashSync(req.body.password,10),
+                password : hashPass,
                 avatar : req.file ? req.file.filename : user.avatar,
                 rol : user.rol
             }
