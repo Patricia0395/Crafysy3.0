@@ -88,6 +88,13 @@ module.exports = {
                 avatar : req.file ? req.file.filename : user.avatar,
                 rol : user.rol
             }
+
+            if(req.file){
+                if(fs.existsSync(path.join(__dirname,'../public/images/users/' + user.avatar)) && user.avatar != "default.png"){
+                    fs.unlinkSync(path.join(__dirname,'../public/images/users/' + user.avatar))
+
+                }
+            }
     
             let usersModified = users.map(user => user.id === req.session.userLogin.id ? userModified : user);
     
